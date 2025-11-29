@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cid Kageno | Developer Portfolio</title>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://github.dev/immature-joy/cid/blob/main/38837babddc75ea3000af20f2999fddd.jpg" />
+    <!-- Favicon (direct ImgBB image) -->
+    <link rel="icon" type="image/png" href="https://i.ibb.co/z0frzV9/38837babddc75ea3000af20f2999fddd.jpg" />
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -25,16 +24,31 @@
         };
     </script>
 
+    <!-- Feather icons -->
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            feather.replace();
+        });
+    </script>
 
+    <!-- Custom stylesheet -->
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
     <custom-navbar></custom-navbar>
 
-    <main class="min-h-screen">
+    <main class="min-h-screen p-4">
+        <h1 class="text-3xl font-bold text-primary-500 mb-6">Cid Kageno Portfolio</h1>
 
+        <!-- Embedded ImgBB image -->
+        <img src="https://i.ibb.co/z0frzV9/38837babddc75ea3000af20f2999fddd.jpg" 
+             alt="Cid Kageno Image" 
+             class="w-48 rounded-lg shadow-lg mb-6">
+    </main>
+</body>
+</html>
         <!-- HERO -->
         <section class="relative overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-secondary-500/10 backdrop-blur-3xl -z-10"></div>
