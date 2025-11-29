@@ -1,20 +1,24 @@
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
+/* Base Styles */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f8fafc;
+    background-color: #f8fafc; /* fallback */
+    margin: 0;
+    padding: 0;
 }
 
 .dark body {
-    background-color: #0f172a;
+    background-color: #0f172a; /* fallback for dark mode */
 }
 
-/* Smooth scroll behavior */
+/* Smooth scroll */
 html {
     scroll-behavior: smooth;
 }
 
-/* Custom scrollbar */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -33,7 +37,53 @@ html {
     background: linear-gradient(to bottom, #4f46e5, #9333ea);
 }
 
-/* Animation for text gradient */
+/* Glassmorphism */
+.glass {
+    backdrop-filter: blur(25px) saturate(200%);
+    -webkit-backdrop-filter: blur(25px) saturate(200%);
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(31,38,135,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.dark .glass {
+    background: rgba(15, 23, 42, 0.7);
+}
+
+/* Hero Floating Animation */
+.hero-img {
+    animation: floating 4s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* Floating class for other elements */
+.floating {
+    animation: floating 3s ease-in-out infinite;
+}
+
+/* Pulse animation for call-to-action buttons */
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(99, 102, 241, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0); }
+}
+
+/* Animate Text Gradient */
 .animate-text-gradient {
     background-image: linear-gradient(to right, #6366f1, #a855f7);
     background-size: 200% auto;
@@ -44,52 +94,12 @@ html {
 }
 
 @keyframes gradient-shift {
-    0% {
-        background-position: 0% center;
-    }
-    50% {
-        background-position: 100% center;
-    }
-    100% {
-        background-position: 0% center;
-    }
+    0% { background-position: 0% center; }
+    50% { background-position: 100% center; }
+    100% { background-position: 0% center; }
 }
 
-/* Floating animation for elements */
-.floating {
-    animation: floating 3s ease-in-out infinite;
-}
-
-@keyframes floating {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
-}
-
-/* Pulse animation for call-to-action elements */
-.pulse {
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7);
-    }
-    70% {
-        box-shadow: 0 0 0 10px rgba(99, 102, 241, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
-    }
-}
-
-/* Gradient underline */
+/* Gradient underline for links */
 .gradient-underline {
     position: relative;
     display: inline-block;
@@ -113,15 +123,50 @@ html {
     transform-origin: left;
 }
 
-/* Glass morphism effect */
-.glass {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+/* Skill Bars */
+.skill-bar > div {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 1.5s ease-in-out;
 }
 
-.dark .glass {
-    background: rgba(15, 23, 42, 0.7);
+.skill-bar.active > div {
+    transform: scaleX(var(--w));
 }
+
+/* Hero Overlay */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    border-radius: 1.5rem;
+    background: linear-gradient(to right, rgba(99,102,241,0.2), rgba(168,85,247,0.2));
+    filter: blur(20px);
+    pointer-events: none;
+}
+
+/* Responsive Text Sizes */
+h1 {
+    font-size: 5rem;
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 3rem; }
+    h2 { font-size: 1.25rem; }
+}
+
+/* Container Utilities */
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+/* Misc Utilities */
+.relative { position: relative; }
+.absolute { position: absolute; }
+.overflow-hidden { overflow: hidden; }
+.rounded-2xl { border-radius: 1rem; }
+.rounded-xl { border-radius: 0.75rem; }
+.shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
