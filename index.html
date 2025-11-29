@@ -33,7 +33,7 @@
 
 <style>
     body {
-        background: url('https://i.postimg.cc/tCscFqfZ/inbound2563079052853288534.png') center/cover no-repeat;
+        background: url('https://i.postimg.cc/2yzZmtfq/background.jpg') center/cover no-repeat;
         background-color: #111;
         background-size: cover;
         background-position: center;
@@ -89,6 +89,15 @@
 <!-- NAVBAR -->
 <custom-navbar></custom-navbar>
 
+<!-- DARK MODE TOGGLE -->
+<div class="fixed bottom-6 right-6 z-50">
+    <button id="dark-toggle" class="p-3 bg-gray-800/60 dark:bg-gray-200/60 text-white dark:text-black rounded-full shadow-lg hover:scale-110 transition-transform">
+        Toggle Dark
+    </button>
+</div>
+
+<main class="flex-1">
+
 <!-- HERO -->
 <section class="relative overflow-hidden py-24">
     <div class="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-secondary-500/10 backdrop-blur-2xl -z-10"></div>
@@ -105,7 +114,7 @@
 
         <div class="md:w-1/2" data-aos="fade-left">
             <h1 class="text-5xl sm:text-4xl font-bold text-white mb-4">
-                Cid <span class="tex-primary-500">Kageno</span>
+                Cid <span class="text-primary-500">Kageno</span>
             </h1>
             <h2 class="text-xl sm:text-lg text-gray-300 mb-6">
                 HSC24 Student • Developer • Learner
@@ -236,6 +245,11 @@
 document.addEventListener("DOMContentLoaded", () => {
     feather.replace();
     AOS.init({ duration: 900, once: true });
+
+    // Dark/Light toggle
+    document.getElementById("dark-toggle").addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+    });
 
     // Animate skill bars
     const skillBars = document.querySelectorAll('.skill-bar');
