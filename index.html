@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cid Kageno | Developer Profile</title>
+    <title>Cid Kageno | Developer Portfolio</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://i.ibb.co/z0frzV9/38837babddc75ea3000af20f2999fddd.jpg" />
+    <link rel="icon" type="image/png"
+          href="https://i.ibb.co/z0frzV9/38837babddc75ea3000af20f2999fddd.jpg" />
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -24,34 +25,47 @@
         };
     </script>
 
-    <!-- Feather icons -->
+    <!-- Feather Icons -->
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
-    <!-- Custom stylesheet -->
+    <!-- AOS Animations -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
     <link rel="stylesheet" href="style.css" />
 </head>
+
 <body class="bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            feather.replace();
+            AOS.init({ duration: 900, once: true });
+        });
+    </script>
 
     <custom-navbar></custom-navbar>
 
     <main class="min-h-screen">
 
         <!-- HERO -->
-        <section class="relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-secondary-500/10 backdrop-blur-3xl -z-10"></div>
+        <section class="relative overflow-hidden py-24"
+                 data-aos="fade-up">
+            <div class="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-secondary-500/10 backdrop-blur-2xl -z-10"></div>
 
-            <div class="container mx-auto px-6 py-24 flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-12 md:mb-0">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+                
+                <!-- Image -->
+                <div class="md:w-1/2 mb-12 md:mb-0" data-aos="fade-right">
                     <div class="relative">
                         <div class="absolute -inset-4 rounded-3xl bg-gradient-to-r from-primary-500 to-secondary-500 opacity-20 blur-lg"></div>
 
-                        <img src="https://i.ibb.co/z0frzV9/38837babddc75ea3000af20f2999fddd.jpg"
-                             alt="Cid Kageno"
-                             class="relative w-64 h-64 rounded-2xl object-cover border-4 border-white/20 shadow-2xl">
+                        <img src="https://i.imgur.com/SmT7vOU.jpeg"
+                             class="relative w-64 h-64 rounded-2xl object-cover border-4 border-white/20 shadow-2xl" />
                     </div>
                 </div>
 
-                <div class="md:w-1/2">
+                <!-- Text -->
+                <div class="md:w-1/2" data-aos="fade-left">
                     <h1 class="text-5xl font-bold text-gray-900 dark:text-white mb-4">
                         Cid <span class="text-primary-500">Kageno</span>
                     </h1>
@@ -62,76 +76,91 @@
 
                     <p class="text-gray-700 dark:text-gray-300 mb-8 max-w-lg">
                         Passionate about AI, bot development, and web development.
-                        Constantly exploring new technologies and building creative projects.
+                        Constantly exploring tech and building meaningful projects.
                     </p>
 
                     <div class="flex gap-4">
                         <a href="#contact"
-                           class="px-6 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                           class="px-6 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                             Contact Me
                         </a>
                         <a href="#about"
-                           class="px-6 py-3 bg-white/10 dark:bg-gray-800/50 text-gray-900 dark:text-white rounded-lg font-medium backdrop-blur-md border border-white/20 transition-all duration-300">
+                           class="px-6 py-3 bg-white/10 dark:bg-gray-800/50 text-gray-900 dark:text-white rounded-lg backdrop-blur-md border border-white/20 transition-all duration-300">
                             About Me
                         </a>
                     </div>
                 </div>
+
             </div>
         </section>
 
         <!-- ABOUT -->
         <section id="about" class="py-20 bg-white/5 dark:bg-gray-800/50 backdrop-blur-md">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
+                
+                <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12"
+                    data-aos="zoom-in">
                     About <span class="text-primary-500">Me</span>
                 </h2>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div>
+
+                    <!-- About Text -->
+                    <div data-aos="fade-right">
                         <p class="text-gray-700 dark:text-gray-300 mb-6 text-lg">
-                            I'm a student at BRAC University, Dhaka — exploring tech and building projects that feel meaningful.
+                            I'm a below-average student at BRAC University, Dhaka — exploring tech and building fun things.
                         </p>
 
                         <p class="text-gray-700 dark:text-gray-300 mb-6 text-lg">
-                            Development, AI, and automation keep me curious and moving.
+                            Development, AI, automation — these things keep me curious.
                         </p>
 
                         <div class="grid grid-cols-2 gap-4">
-                            <div class="bg-white/5 dark:bg-gray-800/50 p-4 rounded-xl border border-white/10">
-                                <div class="text-primary-500 mb-2"><i data-feather="map-pin"></i></div>
-                                <h3 class="font-medium text-gray-900 dark:text-white">Location</h3>
-                                <p class="text-gray-600 dark:text-gray-400">Bhanga, Faridpur</p>
+
+                            <div class="bg-white/5 dark:bg-gray-800/50 p-4 rounded-xl border border-white/10"
+                                 data-aos="zoom-in">
+                                <i data-feather="map-pin" class="text-primary-500"></i>
+                                <h3 class="font-medium text-white mt-2">Location</h3>
+                                <p class="text-gray-400">Bhanga, Faridpur</p>
                             </div>
-                            <div class="bg-white/5 dark:bg-gray-800/50 p-4 rounded-xl border border-white/10">
-                                <div class="text-primary-500 mb-2"><i data-feather="book"></i></div>
-                                <h3 class="font-medium text-gray-900 dark:text-white">Education</h3>
-                                <p class="text-gray-600 dark:text-gray-400">HSC24 - Govt. Rajendra College</p>
+
+                            <div class="bg-white/5 dark:bg-gray-800/50 p-4 rounded-xl border border-white/10"
+                                 data-aos="zoom-in">
+                                <i data-feather="book" class="text-primary-500"></i>
+                                <h3 class="font-medium text-white mt-2">Education</h3>
+                                <p class="text-gray-400">HSC24 - Rajendra College</p>
                             </div>
-                            <div class="bg-white/5 dark:bg-gray-800/50 p-4 rounded-xl border border-white/10">
-                                <div class="text-primary-500 mb-2"><i data-feather="heart"></i></div>
-                                <h3 class="font-medium text-gray-900 dark:text-white">Interests</h3>
-                                <p class="text-gray-600 dark:text-gray-400">AI, Bots, Web Dev</p>
+
+                            <div class="bg-white/5 dark:bg-gray-800/50 p-4 rounded-xl border border-white/10"
+                                 data-aos="zoom-in">
+                                <i data-feather="heart" class="text-primary-500"></i>
+                                <h3 class="font-medium text-white mt-2">Interests</h3>
+                                <p class="text-gray-400">AI, Bots, Web Dev</p>
                             </div>
-                            <div class="bg-white/5 dark:bg-gray-800/50 p-4 rounded-xl border border-white/10">
-                                <div class="text-primary-500 mb-2"><i data-feather="award"></i></div>
-                                <h3 class="font-medium text-gray-900 dark:text-white">Expertise</h3>
-                                <p class="text-gray-600 dark:text-gray-400">Still Learning</p>
+
+                            <div class="bg-white/5 dark:bg-gray-800/50 p-4 rounded-xl border border-white/10"
+                                 data-aos="zoom-in">
+                                <i data-feather="award" class="text-primary-500"></i>
+                                <h3 class="font-medium text-white mt-2">Expertise</h3>
+                                <p class="text-gray-400">Still Learning</p>
                             </div>
+
                         </div>
                     </div>
 
-                    <div class="relative">
-                        <div class="absolute inset-0 bg-gradient-to-r from-primary-500/20 to-secondary-500/20 rounded-3xl blur-xl -z-10"></div>
+                    <!-- Skills -->
+                    <div class="relative" data-aos="fade-left">
                         <div class="bg-white/5 dark:bg-gray-800/50 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">My Skills</h3>
+                            <h3 class="text-xl font-semibold text-white mb-4">My Skills</h3>
 
                             <div class="space-y-4">
+
                                 <div>
                                     <div class="flex justify-between mb-1">
-                                        <span class="text-gray-700 dark:text-gray-300">JavaScript</span>
-                                        <span class="text-gray-600 dark:text-gray-400">80%</span>
+                                        <span class="text-gray-300">JavaScript</span>
+                                        <span class="text-gray-400">80%</span>
                                     </div>
-                                    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                                    <div class="w-full bg-gray-700 rounded-full h-2.5">
                                         <div class="bg-gradient-to-r from-primary-500 to-secondary-500 h-2.5 rounded-full"
                                              style="width: 80%"></div>
                                     </div>
@@ -139,10 +168,10 @@
 
                                 <div>
                                     <div class="flex justify-between mb-1">
-                                        <span class="text-gray-700 dark:text-gray-300">Python</span>
-                                        <span class="text-gray-600 dark:text-gray-400">70%</span>
+                                        <span class="text-gray-300">Python</span>
+                                        <span class="text-gray-400">70%</span>
                                     </div>
-                                    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                                    <div class="w-full bg-gray-700 rounded-full h-2.5">
                                         <div class="bg-gradient-to-r from-primary-500 to-secondary-500 h-2.5 rounded-full"
                                              style="width: 70%"></div>
                                     </div>
@@ -150,10 +179,10 @@
 
                                 <div>
                                     <div class="flex justify-between mb-1">
-                                        <span class="text-gray-700 dark:text-gray-300">HTML/CSS</span>
-                                        <span class="text-gray-600 dark:text-gray-400">85%</span>
+                                        <span class="text-gray-300">HTML/CSS</span>
+                                        <span class="text-gray-400">85%</span>
                                     </div>
-                                    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                                    <div class="w-full bg-gray-700 rounded-full h-2.5">
                                         <div class="bg-gradient-to-r from-primary-500 to-secondary-500 h-2.5 rounded-full"
                                              style="width: 85%"></div>
                                     </div>
@@ -161,16 +190,65 @@
 
                                 <div>
                                     <div class="flex justify-between mb-1">
-                                        <span class="text-gray-700 dark:text-gray-300">AI Development</span>
-                                        <span class="text-gray-600 dark:text-gray-400">65%</span>
+                                        <span class="text-gray-300">AI Development</span>
+                                        <span class="text-gray-400">65%</span>
                                     </div>
-                                    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                                    <div class="w-full bg-gray-700 rounded-full h-2.5">
                                         <div class="bg-gradient-to-r from-primary-500 to-secondary-500 h-2.5 rounded-full"
                                              style="width: 65%"></div>
                                     </div>
                                 </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- API SECTION -->
+        <section class="py-20 bg-gradient-to-r from-primary-500/10 to-secondary-500/10 backdrop-blur-md">
+            <div class="container mx-auto px-6" data-aos="fade-up">
+                <div class="max-w-3xl mx-auto bg-white/5 dark:bg-gray-800/50 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+
+                    <div class="flex flex-col md:flex-row items-center">
+
+                        <div class="md:w-1/3 mb-6 md:mb-0" data-aos="zoom-in">
+                            <div class="bg-gradient-to-r from-primary-500 to-secondary-500 rounded-xl p-4 inline-block">
+                                <i data-feather="cpu" class="w-12 h-12 text-white"></i>
                             </div>
                         </div>
+
+                        <div class="md:w-2/3" data-aos="fade-left">
+                            <h2 class="text-2xl font-bold text-white mb-2">
+                                Public API Service
+                            </h2>
+
+                            <p class="text-gray-300 mb-4">
+                                Explore public API services for developers.
+                            </p>
+
+                            <div class="flex items-center mb-4">
+                                <span class="flex h-3 w-3 relative">
+                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                                </span>
+                                <span class="ml-2 text-gray-300">
+                                    Service Status: <span class="font-medium text-green-400">Online</span>
+                                </span>
+                            </div>
+
+                            <a href="https://github.com/public-apis/public-apis"
+                               class="inline-flex items-center px-6 py-2 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                                Explore API
+                                <i data-feather="arrow-right" class="w-4 h-4 ml-2"></i>
+                            </a>
+
+                        </div>
+
                     </div>
 
                 </div>
@@ -180,39 +258,59 @@
         <!-- CONTACT -->
         <section id="contact" class="py-20">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
+
+                <h2 class="text-3xl font-bold text-center text-white mb-12"
+                    data-aos="zoom-in">
                     Get In <span class="text-primary-500">Touch</span>
                 </h2>
 
+                <p class="text-center text-gray-400 max-w-2xl mx-auto mb-12"
+                   data-aos="fade-up">
+                    Contact me anytime.
+                </p>
+
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
                     <a href="https://wa.me/8801731371266"
-                       class="bg-white/5 dark:bg-gray-800/50 p-6 rounded-xl border border-white/10 text-center backdrop-blur-sm hover:-translate-y-1 transition-all duration-300">
-                        <div class="text-primary-500 mb-3">
-                            <i data-feather="phone" class="w-8 h-8 mx-auto"></i>
-                        </div>
-                        <h3 class="font-medium text-gray-900 dark:text-white mb-1">WhatsApp</h3>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm">+880 17313 71266</p>
+                       class="bg-white/5 dark:bg-gray-800/50 p-6 rounded-xl border border-white/10 text-center backdrop-blur-sm hover:-translate-y-1 transition-all duration-300"
+                       data-aos="fade-up">
+                        <i data-feather="phone" class="w-8 h-8 text-primary-500 mx-auto mb-2"></i>
+                        <h3 class="font-medium text-white">WhatsApp</h3>
+                        <p class="text-gray-400 text-sm">+880 17313 71266</p>
+                    </a>
+
+                    <a href="https://www.facebook.com/share/17ZQ76vdqC/"
+                       class="bg-white/5 dark:bg-gray-800/50 p-6 rounded-xl border border-white/10 text-center backdrop-blur-sm hover:-translate-y-1 transition-all duration-300"
+                       data-aos="fade-up">
+                        <i data-feather="facebook" class="w-8 h-8 text-primary-500 mx-auto mb-2"></i>
+                        <h3 class="font-medium text-white">Facebook</h3>
+                        <p class="text-gray-400 text-sm">Cid Kageno</p>
+                    </a>
+
+                    <a href="mailto:mrityunjoymondol1@gmail.com"
+                       class="bg-white/5 dark:bg-gray-800/50 p-6 rounded-xl border border-white/10 text-center backdrop-blur-sm hover:-translate-y-1 transition-all duration-300"
+                       data-aos="fade-up">
+                        <i data-feather="mail" class="w-8 h-8 text-primary-500 mx-auto mb-2"></i>
+                        <h3 class="font-medium text-white">Email</h3>
+                        <p class="text-gray-400 text-sm">mrityunjoymondol1@gmail.com</p>
                     </a>
 
                     <a href="https://github.com/cid-kagen"
-                       class="bg-white/5 dark:bg-gray-800/50 p-6 rounded-xl border border-white/10 text-center backdrop-blur-sm hover:-translate-y-1 transition-all duration-300">
-                        <div class="text-primary-500 mb-3">
-                            <i data-feather="github" class="w-8 h-8 mx-auto"></i>
-                        </div>
-                        <h3 class="font-medium text-gray-900 dark:text-white mb-1">GitHub</h3>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm">@Cid-Kagen</p>
+                       class="bg-white/5 dark:bg-gray-800/50 p-6 rounded-xl border border-white/10 text-center backdrop-blur-sm hover:-translate-y-1 transition-all duration-300"
+                       data-aos="fade-up">
+                        <i data-feather="github" class="w-8 h-8 text-primary-500 mx-auto mb-2"></i>
+                        <h3 class="font-medium text-white">GitHub</h3>
+                        <p class="text-gray-400 text-sm">@Cid-Kagen</p>
                     </a>
+
                 </div>
+
             </div>
         </section>
 
     </main>
 
     <custom-footer></custom-footer>
-
-    <script>
-        feather.replace();
-    </script>
 
 </body>
 </html>
