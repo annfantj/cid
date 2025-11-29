@@ -35,6 +35,9 @@
     body {
         background: url('https://i.postimg.cc/2yzZmtfq/background.jpg') center/cover no-repeat;
         background-color: #111;
+        background-size: cover;
+        background-position: center;
+        /* Removed background-attachment: fixed to fix scrolling issues */
     }
 
     .glass {
@@ -59,7 +62,17 @@
         50% { transform: translateY(-15px); }
     }
 
-    /* Skill Bar Animation */
+    /* Hero overlay fixed framing */
+    .hero-overlay {
+        position: absolute;
+        inset: 0;
+        border-radius: 1.5rem;
+        background: linear-gradient(to right, rgba(99,102,241,0.2), rgba(168,85,247,0.2));
+        filter: blur(20px);
+        pointer-events: none;
+    }
+
+    /* Skill bar animation */
     .skill-bar > div {
         transform: scaleX(0);
         transform-origin: left;
@@ -92,10 +105,10 @@
 
         <div class="md:w-1/2 mb-12 md:mb-0" data-aos="fade-right">
             <div class="relative">
-                <div class="absolute -inset-4 rounded-3xl bg-gradient-to-r from-primary-500 to-secondary-500 opacity-20 blur-lg"></div>
+                <div class="hero-overlay"></div>
                 <img src="https://files.catbox.moe/3ii420.jpg"
                      alt="Cid Kageno Portrait"
-                     class="relative w-64 h-64 sm:w-48 sm:h-48 rounded-2xl object-cover border-4 border-white/20 shadow-2xl hero-img" />
+                     class="relative w-64 h-64 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-2xl object-cover border-4 border-white/20 shadow-2xl hero-img" />
             </div>
         </div>
 
