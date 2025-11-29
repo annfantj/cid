@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cid Kageno | Developer Portfolio</title>
 
-    <!-- FIXED FAVICON (replace with your own direct link later) -->
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://files.catbox.moe/8e3cbx.jpg" />
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Tailwind Custom Config -->
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -26,10 +25,8 @@
         };
     </script>
 
-    <!-- Feather Icons (use only one) -->
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -37,338 +34,268 @@
     <custom-navbar></custom-navbar>
 
     <main class="min-h-screen">
-        <!-- Hero Section -->
+
+        <!-- HERO -->
         <section class="relative overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-secondary-500/10 backdrop-blur-3xl -z-10"></div>
+
             <div class="container mx-auto px-6 py-24 flex flex-col md:flex-row items-center">
+
                 <div class="md:w-1/2 mb-12 md:mb-0">
                     <div class="relative">
                         <div class="absolute -inset-4 rounded-3xl bg-gradient-to-r from-primary-500 to-secondary-500 opacity-20 blur-lg"></div>
-                        <img src="https://imgur.com/a/LVelThQ" alt="Cid Kageno" class="relative w-64 h-64 rounded-2xl object-cover border-4 border-white/20 shadow-2xl">
+
+                        <img src="https://i.imgur.com/SmT7vOU.jpeg"
+                             alt="Cid Kageno"
+                             class="relative w-64 h-64 rounded-2xl object-cover border-4 border-white/20 shadow-2xl">
                     </div>
                 </div>
+
                 <div class="md:w-1/2">
-                    <h1 class="text-5xl font-bold text-gray-900 dark:text-white mb-4">Cid <span class="text-primary-500">Kageno</span></h1>
-                    <h2 class="text-xl text-gray-600 dark:text-gray-300 mb-6">HSC24 Student • Developer • Learner</h2>
+                    <h1 class="text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                        Cid <span class="text-primary-500">Kageno</span>
+                    </h1>
+
+                    <h2 class="text-xl text-gray-600 dark:text-gray-300 mb-6">
+                        HSC24 Student • Developer • Learner
+                    </h2>
+
                     <p class="text-gray-700 dark:text-gray-300 mb-8 max-w-lg">
-                        Passionate about AI, bot development, and web development. Currently focusing on my career and constantly exploring new technologies.
+                        Passionate about AI, bot development, and web development.
+                        Constantly exploring new technologies and building creative projects.
                     </p>
+
                     <div class="flex gap-4">
-                        <a href="#projects" class="px-6 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                            View Projects
+                        <a href="#contact"
+                           class="px-6 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                            Contact Me
                         </a>
-                        <a href="#contact" class="px-6 py-3 bg-white/10 dark:bg-gray-800/50 text-gray-900 dark:text-white rounded-lg font-medium backdrop-blur-md border border-white/20 hover:bg-white/20 dark:hover:bg-gray-700/50 transition-all duration-300">
-                            Get In Touch
+                        <a href="#about"
+                           class="px-6 py-3 bg-white/10 dark:bg-gray-800/50 text-gray-900 dark:text-white rounded-lg font-medium backdrop-blur-md border border-white/20 transition-all duration-300">
+                            About Me
                         </a>
                     </div>
                 </div>
+
             </div>
         </section>
 
-        <!-- About Section -->
+        <!-- ABOUT -->
         <section id="about" class="py-20 bg-white/5 dark:bg-gray-800/50 backdrop-blur-md">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">About <span class="text-primary-500">Me</span></h2>
+
+                <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
+                    About <span class="text-primary-500">Me</span>
+                </h2>
+
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
                     <div>
                         <p class="text-gray-700 dark:text-gray-300 mb-6 text-lg">
-                            I'm a bellow average student at  BRAC University, Dhaka. I chase new tech, new ideas, and the thrill of building something unique.
-                            
+                            I'm a below-average student at BRAC University, Dhaka — chasing ideas, exploring tech, and trying to build things that feel meaningful.
                         </p>
+
                         <p class="text-gray-700 dark:text-gray-300 mb-6 text-lg">
-                            I believe in continuous learning and improving my skills every day. Currently focusing on building practical projects that solve real-world problems.
+                            Every day is a small step toward learning something new. Development, AI, and automation keep me curious and moving.
                         </p>
+
                         <div class="grid grid-cols-2 gap-4">
-                            <div class="bg-white/5 dark:bg-gray-800/50 p-4 rounded-xl backdrop-blur-sm border border-white/10">
-                                <div class="text-primary-500 mb-2">
-                                    <i data-feather="map-pin"></i>
-                                </div>
+                            <div class="bg-white/5 dark:bg-gray-800/50 p-4 rounded-xl border border-white/10">
+                                <div class="text-primary-500 mb-2"><i data-feather="map-pin"></i></div>
                                 <h3 class="font-medium text-gray-900 dark:text-white">Location</h3>
                                 <p class="text-gray-600 dark:text-gray-400">Bhanga, Faridpur</p>
                             </div>
-                            <div class="bg-white/5 dark:bg-gray-800/50 p-4 rounded-xl backdrop-blur-sm border border-white/10">
-                                <div class="text-primary-500 mb-2">
-                                    <i data-feather="book"></i>
-                                </div>
+
+                            <div class="bg-white/5 dark:bg-gray-800/50 p-4 rounded-xl border border-white/10">
+                                <div class="text-primary-500 mb-2"><i data-feather="book"></i></div>
                                 <h3 class="font-medium text-gray-900 dark:text-white">Education</h3>
-                                <p class="text-gray-600 dark:text-gray-400">HSC24 - Government Rajendra College</p>
+                                <p class="text-gray-600 dark:text-gray-400">HSC24 - Govt. Rajendra College</p>
                             </div>
-                            <div class="bg-white/5 dark:bg-gray-800/50 p-4 rounded-xl backdrop-blur-sm border border-white/10">
-                                <div class="text-primary-500 mb-2">
-                                    <i data-feather="heart"></i>
-                                </div>
+
+                            <div class="bg-white/5 dark:bg-gray-800/50 p-4 rounded-xl border border-white/10">
+                                <div class="text-primary-500 mb-2"><i data-feather="heart"></i></div>
                                 <h3 class="font-medium text-gray-900 dark:text-white">Interests</h3>
-                                <p class="text-gray-600 dark:text-gray-400">AI, Bot Development, Web Dev</p>
+                                <p class="text-gray-600 dark:text-gray-400">AI, Bots, Web Dev</p>
                             </div>
-                            <div class="bg-white/5 dark:bg-gray-800/50 p-4 rounded-xl backdrop-blur-sm border border-white/10">
-                                <div class="text-primary-500 mb-2">
-                                    <i data-feather="award"></i>
-                                </div>
+
+                            <div class="bg-white/5 dark:bg-gray-800/50 p-4 rounded-xl border border-white/10">
+                                <div class="text-primary-500 mb-2"><i data-feather="award"></i></div>
                                 <h3 class="font-medium text-gray-900 dark:text-white">Expertise</h3>
-                                <p class="text-gray-600 dark:text-gray-400">Learning (Student)</p>
+                                <p class="text-gray-600 dark:text-gray-400">Still Learning</p>
                             </div>
                         </div>
                     </div>
+
                     <div class="relative">
                         <div class="absolute inset-0 bg-gradient-to-r from-primary-500/20 to-secondary-500/20 rounded-3xl blur-xl -z-10"></div>
+
                         <div class="bg-white/5 dark:bg-gray-800/50 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
                             <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">My Skills</h3>
+
                             <div class="space-y-4">
+
                                 <div>
                                     <div class="flex justify-between mb-1">
                                         <span class="text-gray-700 dark:text-gray-300">JavaScript</span>
                                         <span class="text-gray-600 dark:text-gray-400">80%</span>
                                     </div>
                                     <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                                        <div class="bg-gradient-to-r from-primary-500 to-secondary-500 h-2.5 rounded-full" style="width: 80%"></div>
+                                        <div class="bg-gradient-to-r from-primary-500 to-secondary-500 h-2.5 rounded-full"
+                                             style="width: 80%"></div>
                                     </div>
                                 </div>
+
                                 <div>
                                     <div class="flex justify-between mb-1">
                                         <span class="text-gray-700 dark:text-gray-300">Python</span>
                                         <span class="text-gray-600 dark:text-gray-400">70%</span>
                                     </div>
                                     <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                                        <div class="bg-gradient-to-r from-primary-500 to-secondary-500 h-2.5 rounded-full" style="width: 70%"></div>
+                                        <div class="bg-gradient-to-r from-primary-500 to-secondary-500 h-2.5 rounded-full"
+                                             style="width: 70%"></div>
                                     </div>
                                 </div>
+
                                 <div>
                                     <div class="flex justify-between mb-1">
                                         <span class="text-gray-700 dark:text-gray-300">HTML/CSS</span>
                                         <span class="text-gray-600 dark:text-gray-400">85%</span>
                                     </div>
                                     <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                                        <div class="bg-gradient-to-r from-primary-500 to-secondary-500 h-2.5 rounded-full" style="width: 85%"></div>
+                                        <div class="bg-gradient-to-r from-primary-500 to-secondary-500 h-2.5 rounded-full"
+                                             style="width: 85%"></div>
                                     </div>
                                 </div>
+
                                 <div>
                                     <div class="flex justify-between mb-1">
                                         <span class="text-gray-700 dark:text-gray-300">AI Development</span>
                                         <span class="text-gray-600 dark:text-gray-400">65%</span>
                                     </div>
                                     <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                                        <div class="bg-gradient-to-r from-primary-500 to-secondary-500 h-2.5 rounded-full" style="width: 65%"></div>
+                                        <div class="bg-gradient-to-r from-primary-500 to-secondary-500 h-2.5 rounded-full"
+                                             style="width: 65%"></div>
                                     </div>
                                 </div>
+
                             </div>
+
                         </div>
                     </div>
+
                 </div>
+
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="py-20">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">Featured <span class="text-primary-500">Projects</span></h2>
-                <p class="text-center text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12">
-                    Explore my latest work and contributions on GitHub. These projects showcase my skills and passion for development.
-                </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project 1 -->
-                    <div class="bg-white/5 dark:bg-gray-800/50 rounded-xl backdrop-blur-sm border border-white/10 p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Goatbot-updated</h3>
-                            <div class="flex items-center space-x-2">
-                                <span class="text-sm text-gray-600 dark:text-gray-400 flex items-center"><i data-feather="star" class="w-4 h-4 mr-1"></i> 18</span>
-                                <span class="text-sm text-gray-600 dark:text-gray-400 flex items-center"><i data-feather="git-branch" class="w-4 h-4 mr-1"></i> 133</span>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">loading</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-primary-500/10 text-primary-500 text-xs rounded-full">JavaScript</span>
-                        </div>
-                        <a href="https://github.com/cid-kagen01/AI Goatbot" class="inline-flex items-center text-primary-500 hover:text-primary-400 transition-colors duration-300">
-                            View on GitHub <i data-feather="arrow-right" class="w-4 h-4 ml-2"></i>
-                        </a>
-                    </div>
-
-                    <!-- Project 2 -->
-                    <div class="bg-white/5 dark:bg-gray-800/50 rounded-xl backdrop-blur-sm border border-white/10 p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">emailnator-tempmail</h3>
-                            <div class="flex items-center space-x-2">
-                                <span class="text-sm text-gray-600 dark:text-gray-400 flex items-center"><i data-feather="star" class="w-4 h-4 mr-1"></i> 0</span>
-                                <span class="text-sm text-gray-600 dark:text-gray-400 flex items-center"><i data-feather="git-branch" class="w-4 h-4 mr-1"></i> 0</span>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">No description available</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                        </div>
-                        <a href="https://github.com/cid-kagen/emailnator-tempmail" class="inline-flex items-center text-primary-500 hover:text-primary-400 transition-colors duration-300">
-                            View on GitHub <i data-feather="arrow-right" class="w-4 h-4 ml-2"></i>
-                        </a>
-                    </div>
-
-                    <!-- Project 3 -->
-                    <div class="bg-white/5 dark:bg-gray-800/50 rounded-xl backdrop-blur-sm border border-white/10 p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">loading</h3>
-                            <div class="flex items-center space-x-2">
-                                <span class="text-sm text-gray-600 dark:text-gray-400 flex items-center"><i data-feather="star" class="w-4 h-4 mr-1"></i> 0</span>
-                                <span class="text-sm text-gray-600 dark:text-gray-400 flex items-center"><i data-feather="git-branch" class="w-4 h-4 mr-1"></i> 0</span>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">A POWERFUL INSTAGRAM CHAT-API LIBRARY ( created by J O Y )</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-primary-500/10 text-primary-500 text-xs rounded-full">JavaScript</span>
-                            <span class="px-2 py-1 bg-secondary-500/10 text-secondary-500 text-xs rounded-full">insta-chat-api</span>
-                        </div>
-                        <a href="https://github.com/cid-kagen/kagen-ica" class="inline-flex items-center text-primary-500 hover:text-primary-400 transition-colors duration-300">
-                            View on GitHub <i data-feather="arrow-right" class="w-4 h-4 ml-2"></i>
-                        </a>
-                    </div>
-
-                    <!-- Project 4 -->
-                    <div class="bg-white/5 dark:bg-gray-800/50 rounded-xl backdrop-blur-sm border border-white/10 p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">kegen-bot</h3>
-                            <div class="flex items-center space-x-2">
-                                <span class="text-sm text-gray-600 dark:text-gray-400 flex items-center"><i data-feather="star" class="w-4 h-4 mr-1"></i> 0</span>
-                                <span class="text-sm text-gray-600 dark:text-gray-400 flex items-center"><i data-feather="git-branch" class="w-4 h-4 mr-1"></i> 0</span>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">ADVANCED INSTAGRAM CHAT BOT by NeoKEX</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-primary-500/10 text-primary-500 text-xs rounded-full">JavaScript</span>
-                        </div>
-                        <a href="https://github.com/cid-kageno1/kegen-bot" class="inline-flex items-center text-primary-500 hover:text-primary-400 transition-colors duration-300">
-                            View on GitHub <i data-feather="arrow-right" class="w-4 h-4 ml-2"></i>
-                        </a>
-                    </div>
-
-                    <!-- Project 5 -->
-                    <div class="bg-white/5 dark:bg-gray-800/50 rounded-xl backdrop-blur-sm border border-white/10 p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Testing</h3>
-                            <div class="flex items-center space-x-2">
-                                <span class="text-sm text-gray-600 dark:text-gray-400 flex items-center"><i data-feather="star" class="w-4 h-4 mr-1"></i> 0</span>
-                                <span class="text-sm text-gray-600 dark:text-gray-400 flex items-center"><i data-feather="git-branch" class="w-4 h-4 mr-1"></i> 1</span>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">No description available</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-primary-500/10 text-primary-500 text-xs rounded-full">Python</span>
-                        </div>
-                        <a href="https://github.com/cid-kagen/Testing" class="inline-flex items-center text-primary-500 hover:text-primary-400 transition-colors duration-300">
-                            View on GitHub <i data-feather="arrow-right" class="w-4 h-4 ml-2"></i>
-                        </a>
-                    </div>
-
-                    <!-- Project 6 -->
-                    <div class="bg-white/5 dark:bg-gray-800/50 rounded-xl backdrop-blur-sm border border-white/10 p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">register</h3>
-                            <div class="flex items-center space-x-2">
-                                <span class="text-sm text-gray-600 dark:text-gray-400 flex items-center"><i data-feather="star" class="w-4 h-4 mr-1"></i> 0</span>
-                                <span class="text-sm text-gray-600 dark:text-gray-400 flex items-center"><i data-feather="git-branch" class="w-4 h-4 mr-1"></i> 1</span>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">Grab your own sweet-looking '.is-a.dev' subdomain.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                        </div>
-                        <a href="https://github.com/cid-kagen/register" class="inline-flex items-center text-primary-500 hover:text-primary-400 transition-colors duration-300">
-                            View on GitHub <i data-feather="arrow-right" class="w-4 h-4 ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-                 <div class="text-center mt-12">
-                    <a href="https://github.com/cid-kagen?tab=repositories" class="inline-flex items-center px-6 py-3 bg-white/5 dark:bg-gray-800/50 text-gray-900 dark:text-white rounded-lg font-medium backdrop-blur-md border border-white/20 hover:bg-white/20 dark:hover:bg-gray-700/50 transition-all duration-300">
-                        View All Projects on GitHub <i data-feather="arrow-right" class="w-4 h-4 ml-2"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- API Section -->
+        <!-- API SECTION -->
         <section class="py-20 bg-gradient-to-r from-primary-500/10 to-secondary-500/10 backdrop-blur-md">
             <div class="container mx-auto px-6">
                 <div class="max-w-3xl mx-auto bg-white/5 dark:bg-gray-800/50 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+
                     <div class="flex flex-col md:flex-row items-center">
+
                         <div class="md:w-1/3 mb-6 md:mb-0">
                             <div class="bg-gradient-to-r from-primary-500 to-secondary-500 rounded-xl p-4 inline-block">
                                 <i data-feather="cpu" class="w-12 h-12 text-white"></i>
                             </div>
                         </div>
+
                         <div class="md:w-2/3">
-                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">NeoKEX API Service</h2>
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                                NeoKEX API Service
+                            </h2>
+
                             <p class="text-gray-600 dark:text-gray-300 mb-4">
-                                Explore my custom API service providing various endpoints for developers. Built with modern technologies and designed for scalability.
+                                Explore my custom API service providing powerful endpoints for developers.
                             </p>
+
                             <div class="flex items-center mb-4">
                                 <span class="flex h-3 w-3 relative">
                                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                                     <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                                 </span>
-                                <span class="ml-2 text-gray-600 dark:text-gray-300">Service Status: <span class="font-medium text-green-500">Online</span></span>
+                                <span class="ml-2 text-gray-600 dark:text-gray-300">
+                                    Service Status:
+                                    <span class="font-medium text-green-500">Online</span>
+                                </span>
                             </div>
-                            <a href="https://cid-kageno.onrender.docs" class="inline-flex items-center px-6 py-2 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300">
-                                Explore API <i data-feather="arrow-right" class="w-4 h-4 ml-2"></i>
+
+                            <a href="https://cid-kageno.onrender.com/docs"
+                               class="inline-flex items-center px-6 py-2 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300">
+                                Explore API
+                                <i data-feather="arrow-right" class="w-4 h-4 ml-2"></i>
                             </a>
+
                         </div>
+
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- CONTACT -->
         <section id="contact" class="py-20">
-    <div class="container mx-auto px-6">
-        
-        <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
-            Get In <span class="text-primary-500">Touch</span>
-        </h2>
+            <div class="container mx-auto px-6">
 
-        <p class="text-center text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12">
-            Feel free to reach out through any of these platforms. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
-        </p>
+                <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
+                    Get In <span class="text-primary-500">Touch</span>
+                </h2>
 
-        <!-- GRID WRAPPER (Missing in your code) -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <p class="text-center text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12">
+                    You can reach me anytime through these platforms. Open to ideas, collaboration, and opportunities.
+                </p>
 
-            <a href="https://wa.me/8801731371266"
-               class="bg-white/5 dark:bg-gray-800/50 backdrop-blur-sm border border-white/10 
-                      rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <div class="text-primary-500 mb-3">
-                    <i data-feather="phone" class="w-8 h-8 mx-auto"></i>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                    <a href="https://wa.me/8801731371266"
+                       class="bg-white/5 dark:bg-gray-800/50 p-6 rounded-xl border border-white/10 text-center backdrop-blur-sm hover:-translate-y-1 transition-all duration-300">
+                        <div class="text-primary-500 mb-3">
+                            <i data-feather="phone" class="w-8 h-8 mx-auto"></i>
+                        </div>
+                        <h3 class="font-medium text-gray-900 dark:text-white mb-1">WhatsApp</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">+880 17313 71266</p>
+                    </a>
+
+                    <a href="https://www.facebook.com/share/17ZQ76vdqC/"
+                       class="bg-white/5 dark:bg-gray-800/50 p-6 rounded-xl border border-white/10 text-center backdrop-blur-sm hover:-translate-y-1 transition-all duration-300">
+                        <div class="text-primary-500 mb-3">
+                            <i data-feather="facebook" class="w-8 h-8 mx-auto"></i>
+                        </div>
+                        <h3 class="font-medium text-gray-900 dark:text-white mb-1">Facebook</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Cid Kageno</p>
+                    </a>
+
+                    <a href="mailto:mrityunjoymondol1@gmail.com"
+                       class="bg-white/5 dark:bg-gray-800/50 p-6 rounded-xl border border-white/10 text-center backdrop-blur-sm hover:-translate-y-1 transition-all duration-300">
+                        <div class="text-primary-500 mb-3">
+                            <i data-feather="mail" class="w-8 h-8 mx-auto"></i>
+                        </div>
+                        <h3 class="font-medium text-gray-900 dark:text-white mb-1">Email</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">mrityunjoymondol1@gmail.com</p>
+                    </a>
+
+                    <a href="https://github.com/cid-kagen"
+                       class="bg-white/5 dark:bg-gray-800/50 p-6 rounded-xl border border-white/10 text-center backdrop-blur-sm hover:-translate-y-1 transition-all duration-300">
+                        <div class="text-primary-500 mb-3">
+                            <i data-feather="github" class="w-8 h-8 mx-auto"></i>
+                        </div>
+                        <h3 class="font-medium text-gray-900 dark:text-white mb-1">GitHub</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">@Cid-Kagen</p>
+                    </a>
+
                 </div>
-                <h3 class="font-medium text-gray-900 dark:text-white mb-1">WhatsApp</h3>
-                <p class="text-gray-600 dark:text-gray-400 text-sm">+880 17313 71266</p>
-            </a>
 
-            <a href="https://www.facebook.com/share/17ZQ76vdqC/"
-               class="bg-white/5 dark:bg-gray-800/50 backdrop-blur-sm border border-white/10 
-                      rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <div class="text-primary-500 mb-3">
-                    <i data-feather="facebook" class="w-8 h-8 mx-auto"></i>
-                </div>
-                <h3 class="font-medium text-gray-900 dark:text-white mb-1">Facebook</h3>
-                <p class="text-gray-600 dark:text-gray-400 text-sm">Cid Kageno</p>
-            </a>
+            </div>
+        </section>
 
-            <a href="mailto:mrityunjoymondol1@gmail.com"
-               class="bg-white/5 dark:bg-gray-800/50 backdrop-blur-sm border border-white/10 
-                      rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <div class="text-primary-500 mb-3">
-                    <i data-feather="mail" class="w-8 h-8 mx-auto"></i>
-                </div>
-                <h3 class="font-medium text-gray-900 dark:text-white mb-1">Email</h3>
-                <p class="text-gray-600 dark:text-gray-400 text-sm">mrityunjoymondol1@gmail.com</p>
-            </a>
+    </main>
 
-            <a href="https://github.com/cid-kagen"
-               class="bg-white/5 dark:bg-gray-800/50 backdrop-blur-sm border border-white/10 
-                      rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <div class="text-primary-500 mb-3">
-                    <i data-feather="github" class="w-8 h-8 mx-auto"></i>
-                </div>
-                <h3 class="font-medium text-gray-900 dark:text-white mb-1">GitHub</h3>
-                <p class="text-gray-600 dark:text-gray-400 text-sm">@Cid-Kageno</p>
-            </a>
+    <custom-footer></custom-footer>
 
-        </div> <!-- End grid -->
-
-    </div>
-</section>
-
-<custom-footer></custom-footer>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
