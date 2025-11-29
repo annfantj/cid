@@ -1,6 +1,6 @@
 # 👋 Hi, I'm Cid Kageno
 
-![Profile Animation](https://github.com/immature-joy/cid/raw/main/Messenger_creation_1586802488992892.webp)
+![Profile Animation](https://i.ibb.co/z0frzV9/38837babddc75ea3000af20f2999fddd.jpg")
 
 ---
 
