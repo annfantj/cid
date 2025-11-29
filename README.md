@@ -1,13 +1,30 @@
-# Cid Kageno — Developer Portfolio
+# 👋 Hi, I'm Cid Kageno
 
-![Header Demo](https://imgur.com/a/bMo1TFm.gif)
-
-[![Website](https://img.shields.io/badge/Website-Online-brightgreen)](#)
-[![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
-[![Tech](https://img.shields.io/badge/Tech-Tailwind%20CSS%20|%20HTML%20|%20JS-purple)](#)
-
-A clean, glassmorphism-styled developer portfolio built with Tailwind CSS and simple HTML.  
-This repo contains a lightweight, responsive single-page portfolio for showcasing you (Cid Kageno): hero, about, API section, contact — minimal and fast.
+![Profile Animation](https://github.com/immature-joy/cid/raw/main/Messenger_creation_1586802488992892.webp)
 
 ---
-https://github.com/immature-joy/cid/blob/main/Messenger_creation_1586802488992892.webp
+
+## 🌟 About Me
+I’m a **developer and creator**, building web projects, bots, and interactive experiences.  
+I love **clean UI/UX, JS animations, and APIs**.  
+
+💻 Focus: Web Development, React, Node.js  
+🎮 Hobbies: Gaming, Anime  
+
+---
+
+## 🛠️ Tech Stack
+HTML | CSS | JavaScript | React | Node.js  
+
+---
+
+## 💡 Projects
+- **Messenger Demo** – Web-based messaging UI with animation  
+- **Other Projects** – Short descriptions here  
+
+---
+
+## 📫 Contact
+- Email: [cid.kageno@example.com](mailto: mrityunjoymondol1@gmail.com)  
+- GitHub: [github.com/immature-joy](https://github.com/immature-joy)  
+- Twitter: [@cid_kageno](https://twitter.com/cid_kageno)
