@@ -6,11 +6,10 @@
     <title>Cid Kageno | Developer Portfolio</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://files.catbox.moe/3ii420.jpg" />
+    <link rel="icon" type="image/png" href="https://ibb.co.com/qP1dvYq.png" />
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -25,81 +24,202 @@
         };
     </script>
 
+    <!-- Feather Icons -->
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
+    <!-- AOS Animations -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
     <style>
-        html { scroll-behavior: smooth; }
-        .fade-up { opacity: 0; transform: translateY(20px); transition: all .8s ease; }
-        .fade-up.visible { opacity: 1; transform: translateY(0); }
+        body {
+            background: url('https://files.catbox.moe/yznehe.png') center/cover no-repeat;
+        }
+        .glass {
+            backdrop-filter: blur(20px) saturate(180%);
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
     </style>
 </head>
+<body class="min-h-screen flex flex-col transition-colors duration-300">
 
-<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        feather.replace();
+        AOS.init({ duration: 900, once: true });
+    });
+</script>
 
-    <!-- NAVBAR -->
-    <nav class="fixed top-0 left-0 w-full backdrop-blur bg-white/10 dark:bg-black/20 border-b border-white/10 z-50">
-        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-xl font-bold text-primary-500">Cid Kageno</h1>
-            <div class="flex gap-6 text-sm">
-                <a href="#home" class="hover:text-primary-500">Home</a>
-                <a href="#about" class="hover:text-primary-500">About</a>
-                <a href="#projects" class="hover:text-primary-500">Projects</a>
-                <a href="#contact" class="hover:text-primary-500">Contact</a>
-            </div>
-        </div>
-    </nav>
+<custom-navbar></custom-navbar>
+
+<main class="flex-grow">
 
     <!-- HERO -->
-    <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-24 fade-up">
-        <img src="https://files.catbox.moe/3ii420.jpg" class="w-48 h-48 rounded-2xl object-cover shadow-2xl border border-white/20" />
-        <h2 class="mt-6 text-4xl font-bold">Hey, I'm Cid Kageno</h2>
-        <p class="mt-4 max-w-xl text-gray-600 dark:text-gray-300">Developer · Designer · Creator of elegant web experiences.</p>
+    <section class="relative overflow-hidden py-24">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-secondary-500/10 backdrop-blur-2xl -z-10"></div>
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+
+            <div class="md:w-1/2 mb-12 md:mb-0" data-aos="fade-right">
+                <div class="relative">
+                    <div class="absolute -inset-4 rounded-3xl bg-gradient-to-r from-primary-500 to-secondary-500 opacity-20 blur-lg"></div>
+                    <img src="https://i.imgur.com/SmT7vOU.jpeg"
+                         class="relative w-64 h-64 rounded-2xl object-cover border-4 border-white/20 shadow-2xl" />
+                </div>
+            </div>
+
+            <div class="md:w-1/2" data-aos="fade-left">
+                <h1 class="text-5xl font-bold text-white mb-4">
+                    Cid <span class="text-primary-500">Kageno</span>
+                </h1>
+                <h2 class="text-xl text-gray-300 mb-6">
+                    HSC24 Student • Developer • Learner
+                </h2>
+                <p class="text-gray-200 mb-8 max-w-lg">
+                    Passionate about AI, bot development, and web development. Constantly exploring tech and building meaningful projects.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#contact"
+                       class="px-6 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        Contact Me
+                    </a>
+                    <a href="#about"
+                       class="px-6 py-3 glass text-white rounded-lg transition-all duration-300">
+                        About Me
+                    </a>
+                </div>
+            </div>
+
+        </div>
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="max-w-4xl mx-auto py-24 px-6 fade-up">
-        <h2 class="text-3xl font-bold mb-6">About Me</h2>
-        <p class="leading-relaxed text-gray-600 dark:text-gray-300">
-            I build modern, responsive web interfaces with a focus on clean visuals and smooth user experience.
-        </p>
-    </section>
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-white mb-12" data-aos="zoom-in">
+                About <span class="text-primary-500">Me</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
-    <!-- PROJECTS -->
-    <section id="projects" class="max-w-5xl mx-auto py-24 px-6 fade-up">
-        <h2 class="text-3xl font-bold mb-10">Projects</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white/10 dark:bg-white/5 p-6 rounded-xl shadow-lg border border-white/10">
-                <h3 class="text-xl font-semibold mb-2">Project One</h3>
-                <p class="text-sm text-gray-400">Description of project goes here.</p>
-            </div>
-            <div class="bg-white/10 dark:bg-white/5 p-6 rounded-xl shadow-lg border border-white/10">
-                <h3 class="text-xl font-semibold mb-2">Project Two</h3>
-                <p class="text-sm text-gray-400">Another neat project.</p>
-            </div>
-            <div class="bg-white/10 dark:bg-white/5 p-6 rounded-xl shadow-lg border border-white/10">
-                <h3 class="text-xl font-semibold mb-2">Project Three</h3>
-                <p class="text-sm text-gray-400">More work coming soon.</p>
+                <div data-aos="fade-right">
+                    <p class="text-gray-200 mb-6 text-lg">
+                        I'm a below-average student at BRAC University, Dhaka — exploring tech and building fun things.
+                    </p>
+                    <p class="text-gray-200 mb-6 text-lg">
+                        Development, AI, automation — these things keep me curious.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+
+                        <div class="glass p-4 rounded-xl border border-white/20" data-aos="zoom-in">
+                            <i data-feather="map-pin" class="text-primary-500"></i>
+                            <h3 class="font-medium text-white mt-2">Location</h3>
+                            <p class="text-gray-400">Bhanga, Faridpur</p>
+                        </div>
+
+                        <div class="glass p-4 rounded-xl border border-white/20" data-aos="zoom-in">
+                            <i data-feather="book" class="text-primary-500"></i>
+                            <h3 class="font-medium text-white mt-2">Education</h3>
+                            <p class="text-gray-400">HSC24 - Rajendra College</p>
+                        </div>
+
+                        <div class="glass p-4 rounded-xl border border-white/20" data-aos="zoom-in">
+                            <i data-feather="heart" class="text-primary-500"></i>
+                            <h3 class="font-medium text-white mt-2">Interests</h3>
+                            <p class="text-gray-400">AI, Bots, Web Dev</p>
+                        </div>
+
+                        <div class="glass p-4 rounded-xl border border-white/20" data-aos="zoom-in">
+                            <i data-feather="award" class="text-primary-500"></i>
+                            <h3 class="font-medium text-white mt-2">Expertise</h3>
+                            <p class="text-gray-400">Still Learning</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="relative" data-aos="fade-left">
+                    <div class="glass p-8 rounded-2xl border border-white/20">
+                        <h3 class="text-xl font-semibold text-white mb-4">My Skills</h3>
+                        <div class="space-y-4">
+
+                            <div>
+                                <div class="flex justify-between mb-1 text-gray-300">
+                                    <span>JavaScript</span><span>80%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                    <div class="bg-gradient-to-r from-primary-500 to-secondary-500 h-2.5 rounded-full" style="width: 80%"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between mb-1 text-gray-300">
+                                    <span>Python</span><span>70%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                    <div class="bg-gradient-to-r from-primary-500 to-secondary-500 h-2.5 rounded-full" style="width: 70%"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between mb-1 text-gray-300">
+                                    <span>HTML/CSS</span><span>85%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                    <div class="bg-gradient-to-r from-primary-500 to-secondary-500 h-2.5 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between mb-1 text-gray-300">
+                                    <span>AI Development</span><span>65%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                    <div class="bg-gradient-to-r from-primary-500 to-secondary-500 h-2.5 rounded-full" style="width: 65%"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="max-w-3xl mx-auto py-24 px-6 fade-up">
-        <h2 class="text-3xl font-bold mb-6">Contact</h2>
-        <p>Email: <a href="mailto:cid@example.com" class="text-primary-500">cid@example.com</a></p>
-        <p>GitHub: <a href="https://github.com/cid-kageno1" class="text-primary-500" target="_blank">cid-kageno1</a></p>
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-white mb-12" data-aos="zoom-in">
+                Get In <span class="text-primary-500">Touch</span>
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="https://wa.me/8801731371266" class="glass p-6 rounded-xl border border-white/20 text-center hover:-translate-y-1 transition-all duration-300">
+                    <i data-feather="phone" class="w-8 h-8 text-primary-500 mx-auto mb-2"></i>
+                    <h3 class="font-medium text-white">WhatsApp</h3>
+                    <p class="text-gray-400 text-sm">+880 17313 71266</p>
+                </a>
+                <a href="https://www.facebook.com/share/17ZQ76vdqC/" class="glass p-6 rounded-xl border border-white/20 text-center hover:-translate-y-1 transition-all duration-300">
+                    <i data-feather="facebook" class="w-8 h-8 text-primary-500 mx-auto mb-2"></i>
+                    <h3 class="font-medium text-white">Facebook</h3>
+                    <p class="text-gray-400 text-sm">Cid Kageno</p>
+                </a>
+                <a href="mailto:mrityunjoymondol1@gmail.com" class="glass p-6 rounded-xl border border-white/20 text-center hover:-translate-y-1 transition-all duration-300">
+                    <i data-feather="mail" class="w-8 h-8 text-primary-500 mx-auto mb-2"></i>
+                    <h3 class="font-medium text-white">Email</h3>
+                    <p class="text-gray-400 text-sm">mrityunjoymondol1@gmail.com</p>
+                </a>
+                <a href="https://github.com/cid-kagen" class="glass p-6 rounded-xl border border-white/20 text-center hover:-translate-y-1 transition-all duration-300">
+                    <i data-feather="github" class="w-8 h-8 text-primary-500 mx-auto mb-2"></i>
+                    <h3 class="font-medium text-white">GitHub</h3>
+                    <p class="text-gray-400 text-sm">@Cid-Kagen</p>
+                </a>
+            </div>
+        </div>
     </section>
 
-    <footer class="text-center py-10 text-gray-500 text-sm">© 2025 Cid Kageno</footer>
+</main>
 
-    <script>
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
-            });
-        }, { threshold: 0.2 });
+<custom-footer></custom-footer>
 
-        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-    </script>
 </body>
-</html>
+</html>a
