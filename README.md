@@ -1,6 +1,6 @@
 # Cid Kageno — Developer Portfolio
 
-![Header Demo](assets/demo.gif)
+![Header Demo](https://imgur.com/a/bMo1TFm.gif)
 
 [![Website](https://img.shields.io/badge/Website-Online-brightgreen)](#)
 [![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
@@ -10,10 +10,3 @@ A clean, glassmorphism-styled developer portfolio built with Tailwind CSS and si
 This repo contains a lightweight, responsive single-page portfolio for showcasing you (Cid Kageno): hero, about, API section, contact — minimal and fast.
 
 ---
-
-## Demo
-
-> Replace `assets/demo.gif` with your recording of the site (recommended: 800×450, under 2–3 MB)
-
-```markdown
-![Site Demo](assets/demo.gif)
