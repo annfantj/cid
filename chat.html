@@ -173,15 +173,35 @@ async function sendMessage() {
 
     const loadingDiv = document.createElement('div');
     loadingDiv.className = 'message bot';
-    loadingDiv.textContent = '...';
     chatMessages.appendChild(loadingDiv);
-    chatMessages.scrollTo({ top: chatMessages.scrollHeight, behavior: 'smooth' });
+
+    // Typing animation
+    let dots = 0;
+    const maxDots = 3;
+    const typingInterval = setInterval(() => {
+        dots = (dots + 1) % (maxDots + 1);
+        loadingDiv.textContent = '.'.repeat(dots);
+        chatMessages.scrollTo({ top: chatMessages.scrollHeight, behavior: 'smooth' });
+    }, 500);
 
     try {
-        const res = await fetch(`https://simsimi.cyberbot.top/?text=${encodeURIComponent(msg)}`);
+        const res = await fetch("http://localhost:3000/chat", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ text: msg })
+        });
         const data = await res.json();
-        loadingDiv.textContent = data.result || 'No response';
-    } catch(err) {
+
+        // Random delay to simulate thinking
+        const delay = Math.random() * 1000 + 500;
+        setTimeout(() => {
+            clearInterval(typingInterval);
+            loadingDiv.textContent = data.result || 'No response';
+            chatMessages.scrollTo({ top: chatMessages.scrollHeight, behavior: 'smooth' });
+        }, delay);
+
+    } catch (err) {
+        clearInterval(typingInterval);
         loadingDiv.textContent = 'Error: Unable to reach API';
         console.error(err);
     } finally {
