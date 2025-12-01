@@ -8,181 +8,131 @@
 <!-- Tailwind CSS -->
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
-    tailwind.config = {
-        darkMode: 'class',
-        theme: {
-            extend: {
-                colors: {
-                    primary: { 500: '#6366f1' },
-                    secondary: { 500: '#a855f7' }
-                }
+tailwind.config = {
+    darkMode: 'class',
+    theme: {
+        extend: {
+            colors: {
+                primary: { 500: '#6366f1' },
+                secondary: { 500: '#a855f7' }
             }
         }
-    };
+    }
+};
 </script>
 
 <!-- AOS CSS -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
 
 <style>
-    .profile-pic {
-        width: 160px;
-        height: 160px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 3px solid rgba(255, 255, 255, 0.5);
-        box-shadow: 0 0 15px rgba(99, 102, 241, 0.8),
-                    0 0 30px rgba(168, 85, 247, 0.7),
-                    0 0 45px rgba(99, 102, 241, 0.6);
-    }
+/* Glass effect & hover */
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.glass:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
 
-    /* Glass effect */
+/* Profile picture */
+.profile-pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.8),
+                0 0 30px rgba(168, 85, 247, 0.7),
+                0 0 45px rgba(99, 102, 241, 0.6);
+}
+
+/* Floating chat icon */
+#chat-toggle {
+    animation: float-chat 3s ease-in-out infinite;
+}
+@keyframes float-chat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+/* Skill bars */
+.skill-bar div[data-width] {
+    width: 0;
+    transition: width 1.5s ease-in-out;
+}
+
+/* Scrollbar customization */
+.scrollbar-thin {
+    scrollbar-width: thin;
+}
+.scrollbar-thumb-gray-600 {
+    scrollbar-color: #4b5563 transparent;
+}
+.scrollbar-track-gray-800 {
+    background: #1f2937;
+}
+
+/* Tools horizontal scroll & snap */
+.tools-scroll {
+    overflow-x-auto;
+    display: flex;
+    gap: 1.5rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
+}
+.tools-scroll > a {
+    scroll-snap-align: start;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
     .glass {
-        background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(10px);
-        transition: all 0.3s ease-in-out;
+        padding: 1.25rem;
+        min-width: 140px;
     }
-
-    .glass:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    .profile-pic {
+        width: 128px;
+        height: 128px;
     }
-
-    /* Floating chat icon */
-    #chat-toggle {
-        animation: float-chat 3s ease-in-out infinite;
+    h1 {
+        font-size: 2.75rem;
     }
-    @keyframes float-chat {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-8px); }
-    }
-
-    /* Skill bars */
-    .skill-bar div[data-width] {
-        width: 0;
-        transition: width 1.5s ease-in-out;
-    }
-
-    /* Scrollbar customization */
-    .scrollbar-thin {
-        scrollbar-width: thin;
-    }
-    .scrollbar-thumb-gray-600 {
-        scrollbar-color: #4b5563 transparent;
-    }
-    .scrollbar-track-gray-800 {
-        background: #1f2937;
-    }
-
-    /* Smooth horizontal scroll with snapping */
-    .tools-scroll {
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-    }
-    .tools-scroll > a {
-        scroll-snap-align: start;
-    }
+}
 </style>
 </head>
 
 <body class="bg-gray-900 text-white min-h-screen flex flex-col transition-colors duration-300">
 
-<!-- Custom Navbar -->
+<!-- Navbar -->
 <custom-navbar></custom-navbar>
 
 <!-- HERO SECTION -->
-<section class="relative overflow-hidden py-24">
+<section class="relative overflow-hidden py-20 md:py-24">
     <div class="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-secondary-500/10 backdrop-blur-2xl -z-10"></div>
-    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
-        <div class="md:w-1/2 mb-12 md:mb-0" data-aos="fade-right">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-8">
+        <div class="md:w-1/2 flex justify-center md:justify-start" data-aos="fade-right">
             <img src="https://files.catbox.moe/3ii420.jpg"
                  alt="Cid Kageno Portrait"
-                 class="w-64 h-64 md:w-64 md:h-64 object-cover shadow-2xl rounded-full" />
+                 class="profile-pic" />
         </div>
-        <div class="md:w-1/2" data-aos="fade-left">
+        <div class="md:w-1/2 text-center md:text-left" data-aos="fade-left">
             <h1 class="text-5xl sm:text-4xl font-bold text-white mb-4">
                 Cid <span class="text-primary-500">Kageno</span>
             </h1>
             <h2 class="text-xl sm:text-lg text-gray-300 mb-6">
                 HSC24 Student • Developer • Learner
             </h2>
-            <p class="text-gray-200 mb-8 max-w-lg">
+            <p class="text-gray-200 mb-6 max-w-lg mx-auto md:mx-0">
                 Passionate about AI, bot development, and web development. Constantly exploring tech and building meaningful projects.
             </p>
-            <div class="flex gap-4 flex-wrap">
+            <div class="flex flex-wrap justify-center md:justify-start gap-4">
                 <a href="#contact"
                    class="px-6 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-           <!-- TOOLS SECTION -->
-<section id="tools" class="py-20 bg-gray-900">
-  <div class="container mx-auto px-6">
-    <h2 class="text-3xl font-bold text-center text-white mb-8" data-aos="zoom-in">
-      My <span class="text-purple-500">Tools</span>
-    </h2>
-
-    <div class="flex gap-6 overflow-x-auto py-4 px-2 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800 tools-scroll">
-
-      <!-- 4K Upscaler (First) -->
-      <a href="rimini.html" target="_blank" aria-label="Open 4K Upscaler Tool"
-         class="glass min-w-[180px] p-6 rounded-2xl border border-white/15 text-center hover:scale-105 transition-transform duration-200" data-aos="fade-right">
-        <img src="https://via.placeholder.com/80" alt="4K Upscaler" class="mx-auto mb-4 rounded-full">
-        <h3 class="font-medium text-white text-lg mb-2">4K Upscaler</h3>
-        <p class="text-gray-400 text-sm">Upscale images to simulated 4K resolution.</p>
-      </a>
-
-      <!-- Nano Banana -->
-      <a href="nano-banana.html" target="_blank" aria-label="Open Nano Banana Tool"
-         class="glass min-w-[180px] p-6 rounded-2xl border border-white/15 text-center hover:scale-105 transition-transform duration-200" data-aos="fade-right">
-        <img src="https://via.placeholder.com/80" alt="Nano Banana" class="mx-auto mb-4 rounded-full">
-        <h3 class="font-medium text-white text-lg mb-2">Nano Banana</h3>
-        <p class="text-gray-400 text-sm">AI-powered creative edits.</p>
-      </a>
-
-      <!-- Face Swap -->
-      <a href="face-swap.html" target="_blank" aria-label="Open Face Swap Tool"
-         class="glass min-w-[180px] p-6 rounded-2xl border border-white/15 text-center hover:scale-105 transition-transform duration-200" data-aos="fade-right">
-        <img src="https://via.placeholder.com/80" alt="Face Swap" class="mx-auto mb-4 rounded-full">
-        <h3 class="font-medium text-white text-lg mb-2">Face Swap</h3>
-        <p class="text-gray-400 text-sm">Swap faces in images using AI.</p>
-      </a>
-
-      <!-- Other Tool Example -->
-      <a href="other-tool.html" target="_blank" aria-label="Open Other Tool"
-         class="glass min-w-[180px] p-6 rounded-2xl border border-white/15 text-center hover:scale-105 transition-transform duration-200" data-aos="fade-right">
-        <img src="https://via.placeholder.com/80" alt="Other Tool" class="mx-auto mb-4 rounded-full">
-        <h3 class="font-medium text-white text-lg mb-2">Other Tool</h3>
-        <p class="text-gray-400 text-sm">Description for another tool.</p>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-<!-- Tailwind Glass & Scroll-Snap Styling -->
-<style>
-  .glass {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .glass:hover {
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-  }
-  .tools-scroll {
-    scroll-snap-type: x mandatory;
-  }
-  .tools-scroll > a {
-    scroll-snap-align: start;
-  }
-
-  /* Optional: mobile adjustments */
-  @media (max-width: 640px) {
-    .glass {
-      padding: 1.5rem;
-      min-width: 150px;
-    }
-  }
-</style>         Contact Me
+                    Contact Me
                 </a>
                 <a href="#about"
                    class="px-6 py-3 glass text-white rounded-lg transition-all duration-300">
@@ -193,7 +143,44 @@
     </div>
 </section>
 
-
+<!-- TOOLS SECTION -->
+<section id="tools" class="py-16 md:py-20">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-white mb-8" data-aos="zoom-in">
+            My <span class="text-purple-500">Tools</span>
+        </h2>
+        <div class="tools-scroll">
+            <!-- 4K Upscaler -->
+            <a href="rimini.html" target="_blank" aria-label="Open 4K Upscaler Tool"
+               class="glass min-w-[180px] p-6 rounded-2xl border border-white/15 text-center" data-aos="fade-right">
+                <img src="https://via.placeholder.com/80" alt="4K Upscaler" class="mx-auto mb-4 rounded-full">
+                <h3 class="font-medium text-white text-lg mb-2">4K Upscaler</h3>
+                <p class="text-gray-400 text-sm">Upscale images to simulated 4K resolution.</p>
+            </a>
+            <!-- Nano Banana -->
+            <a href="nano-banana.html" target="_blank" aria-label="Open Nano Banana Tool"
+               class="glass min-w-[180px] p-6 rounded-2xl border border-white/15 text-center" data-aos="fade-right">
+                <img src="https://via.placeholder.com/80" alt="Nano Banana" class="mx-auto mb-4 rounded-full">
+                <h3 class="font-medium text-white text-lg mb-2">Nano Banana</h3>
+                <p class="text-gray-400 text-sm">AI-powered creative edits.</p>
+            </a>
+            <!-- Face Swap -->
+            <a href="face-swap.html" target="_blank" aria-label="Open Face Swap Tool"
+               class="glass min-w-[180px] p-6 rounded-2xl border border-white/15 text-center" data-aos="fade-right">
+                <img src="https://via.placeholder.com/80" alt="Face Swap" class="mx-auto mb-4 rounded-full">
+                <h3 class="font-medium text-white text-lg mb-2">Face Swap</h3>
+                <p class="text-gray-400 text-sm">Swap faces in images using AI.</p>
+            </a>
+            <!-- Other Tool -->
+            <a href="other-tool.html" target="_blank" aria-label="Open Other Tool"
+               class="glass min-w-[180px] p-6 rounded-2xl border border-white/15 text-center" data-aos="fade-right">
+                <img src="https://via.placeholder.com/80" alt="Other Tool" class="mx-auto mb-4 rounded-full">
+                <h3 class="font-medium text-white text-lg mb-2">Other Tool</h3>
+                <p class="text-gray-400 text-sm">Description for another tool.</p>
+            </a>
+        </div>
+    </div>
+</section>
 
 <!-- ABOUT & SKILLS SECTION -->
 <section id="about" class="py-20">
@@ -203,7 +190,7 @@
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div data-aos="fade-right">
-                <p class="text-gray-200 mb-6 text-lg">I'm a below-average student at BRAC University, Dhaka — exploring tech and building fun things.</p>
+                <p class="text-gray-200 mb-4 text-lg">I'm a below-average student at BRAC University, Dhaka — exploring tech and building fun things.</p>
                 <p class="text-gray-200 mb-6 text-lg">Development, AI, automation — these things keep me curious.</p>
                 <div class="grid grid-cols-2 gap-4">
                     <div class="glass p-4 rounded-xl border border-white/15" data-aos="zoom-in">
@@ -219,9 +206,9 @@
                 </div>
             </div>
 
-            <!-- My Skills Section -->
+            <!-- Skills -->
             <div class="relative" data-aos="fade-left">
-                <div class="glass p-8 rounded-2xl border border-white/15">
+                <div class="glass p-6 md:p-8 rounded-2xl border border-white/15">
                     <h3 class="text-xl font-semibold text-white mb-4">My Skills</h3>
                     <div class="space-y-4">
                         <div class="skill-bar" data-aos="fade-up">
@@ -305,29 +292,24 @@ document.addEventListener("DOMContentLoaded", () => {
     feather.replace();
     AOS.init({ duration: 900, once: true });
 
-    // Animate skill bars on scroll
+    // Animate skill bars
     const skillBars = document.querySelectorAll('.skill-bar div[data-width]');
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if(entry.isIntersecting) {
                 const bar = entry.target;
-                bar.style.transition = "width 1.5s ease-in-out";
                 bar.style.width = bar.getAttribute("data-width");
                 observer.unobserve(bar);
             }
         });
     }, { threshold: 0.3 });
-
-    skillBars.forEach(bar => {
-        bar.style.width = "0";
-        observer.observe(bar);
-    });
+    skillBars.forEach(bar => observer.observe(bar));
 
     // Custom Navbar
     class CustomNavbar extends HTMLElement {
         connectedCallback() {
             this.innerHTML = `
-            <nav class="p-6 flex justify-between items-center bg-black/20 backdrop-blur-md rounded-lg mx-6 my-4">
+            <nav class="p-4 md:p-6 flex justify-between items-center bg-black/20 backdrop-blur-md rounded-lg mx-4 md:mx-6 my-4">
                 <a href="#" class="text-white font-bold text-xl">Cid Kageno</a>
                 <div class="flex gap-4">
                     <a href="#about" class="text-gray-300 hover:text-white transition">About</a>
