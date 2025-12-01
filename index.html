@@ -142,13 +142,14 @@ tailwind.config = {
 
     <!-- Tools Scroll Container -->
     <div class="tools-scroll scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800 flex gap-6 overflow-x-auto scroll-smooth px-4">
-      <!-- 4K Upscaler -->
-      <a href="rimini.html" target="_blank" aria-label="Open 4K Upscaler Tool"
+
+      <!-- Rimini Tool -->
+      <a href="rimini.html" target="_blank" aria-label="Open Rimini Tool"
          class="glass min-w-[180px] p-6 rounded-2xl border border-white/15 text-center relative overflow-hidden group" data-aos="fade-right">
         <div class="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-secondary-500/20 opacity-0 group-hover:opacity-50 transition-opacity rounded-2xl"></div>
-        <img src="https://img.icons8.com/color/96/upscaler.png" alt="4K Upscaler" class="mx-auto mb-4 rounded-full">
-        <h3 class="font-medium text-white text-lg mb-2">4K Upscaler</h3>
-        <p class="text-gray-400 text-sm">Upscale images to simulated 4K resolution.</p>
+        <img src="https://img.icons8.com/color/96/upscaler.png" alt="Rimini" class="mx-auto mb-4 rounded-full">
+        <h3 class="font-medium text-white text-lg mb-2">Rimini</h3>
+        <p class="text-gray-400 text-sm">Enhance and upscale your images with Rimini AI.</p>
       </a>
 
       <!-- Nano Banana -->
@@ -177,6 +178,7 @@ tailwind.config = {
         <h3 class="font-medium text-white text-lg mb-2">Other Tool</h3>
         <p class="text-gray-400 text-sm">Description for another tool.</p>
       </a>
+
     </div>
   </div>
 </section>
@@ -253,23 +255,51 @@ tailwind.config = {
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- CONTACT SECTION -->
 <section id="contact" class="py-20">
   <div class="container mx-auto px-6">
     <h2 class="text-3xl font-bold text-center text-white mb-12" data-aos="zoom-in">
       Get In <span class="text-primary-500">Touch</span>
     </h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <a href="https://wa.me/8801731371266" class="glass p-6 rounded-xl border border-white/15 text-center">
-        <i data-feather="phone" class="w-8 h-8 text-primary-500 mx-auto mb-2"></i>
-        <h3 class="font-medium text-white">WhatsApp</h3>
-        <p class="text-gray-400 text-sm">+880 17313 71266</p>
-      </a>
-      <a href="mailto:mrityunjoymondol1@gmail.com" class="glass p-6 rounded-xl border border-white/15 text-center">
-        <i data-feather="mail" class="w-8 h-8 text-primary-500 mx-auto mb-2"></i>
-        <h3 class="font-medium text-white">Email</h3>
-        <p class="text-gray-400 text-sm">mrityunjoymondol1@gmail.com</p>
-      </a>
+
+    <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
+      Feel free to reach out via WhatsApp, Email, or send me a message directly using the form below.
+    </p>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+      <!-- Contact Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <a href="https://wa.me/8801731371266" class="glass p-6 rounded-xl border border-white/15 text-center">
+          <i data-feather="phone" class="w-8 h-8 text-primary-500 mx-auto mb-2"></i>
+          <h3 class="font-medium text-white">WhatsApp</h3>
+          <p class="text-gray-400 text-sm">+880 17313 71266</p>
+        </a>
+
+        <a href="mailto:mrityunjoymondol1@gmail.com" class="glass p-6 rounded-xl border border-white/15 text-center">
+          <i data-feather="mail" class="w-8 h-8 text-primary-500 mx-auto mb-2"></i>
+          <h3 class="font-medium text-white">Email</h3>
+          <p class="text-gray-400 text-sm">mrityunjoymondol1@gmail.com</p>
+        </a>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="bg-white/5 dark:bg-gray-800/50 backdrop-blur-sm border border-white/10 rounded-xl p-8 shadow-lg">
+        <h3 class="text-xl font-semibold text-white mb-6">Send Me a Message</h3>
+        <form action="https://formsubmit.co/mrityunjoymondol1@gmail.com" method="POST" class="space-y-4">
+          <input type="text" name="name" placeholder="Your Name" required
+                 class="w-full p-3 rounded-lg bg-gray-100/20 dark:bg-gray-700/30 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-primary-500">
+          <input type="email" name="email" placeholder="Your Email" required
+                 class="w-full p-3 rounded-lg bg-gray-100/20 dark:bg-gray-700/30 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-primary-500">
+          <textarea name="message" rows="5" placeholder="Your Message" required
+                    class="w-full p-3 rounded-lg bg-gray-100/20 dark:bg-gray-700/30 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-primary-500"></textarea>
+          <button type="submit"
+                  class="w-full py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+            Send Message
+          </button>
+        </form>
+      </div>
+
     </div>
   </div>
 </section>
@@ -308,28 +338,4 @@ document.addEventListener("DOMContentLoaded", () => {
     class CustomNavbar extends HTMLElement {
         connectedCallback() {
             this.innerHTML = `
-            <nav class="p-4 md:p-6 flex justify-between items-center bg-black/20 backdrop-blur-md rounded-lg mx-4 md:mx-6 my-4">
-                <a href="#" class="text-white font-bold text-xl">Cid Kageno</a>
-                <div class="flex gap-4">
-                    <a href="#about" class="text-gray-300 hover:text-white transition">About</a>
-                    <a href="#contact" class="text-gray-300 hover:text-white transition">Contact</a>
-                </div>
-            </nav>`;
-        }
-    }
-    customElements.define('custom-navbar', CustomNavbar);
-
-    // Custom Footer
-    class CustomFooter extends HTMLElement {
-        connectedCallback() {
-            this.innerHTML = `
-            <footer class="text-center p-6 bg-black/20 backdrop-blur-md text-gray-400 mt-12">
-                &copy; 2025 Cid Kageno. All rights reserved.
-            </footer>`;
-        }
-    }
-    customElements.define('custom-footer', CustomFooter);
-});
-</script>
-</body>
-</html>
+            <nav class="p-4 md:p-6 flex justify-between items-center bg-black/20 backdrop-blur
