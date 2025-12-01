@@ -112,7 +112,77 @@
             <div class="flex gap-4 flex-wrap">
                 <a href="#contact"
                    class="px-6 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                    Contact Me
+           <!-- TOOLS SECTION -->
+<section id="tools" class="py-20 bg-gray-900">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center text-white mb-8" data-aos="zoom-in">
+      My <span class="text-purple-500">Tools</span>
+    </h2>
+
+    <div class="flex gap-6 overflow-x-auto py-4 px-2 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800 tools-scroll">
+
+      <!-- 4K Upscaler (First) -->
+      <a href="rimini.html" target="_blank" aria-label="Open 4K Upscaler Tool"
+         class="glass min-w-[180px] p-6 rounded-2xl border border-white/15 text-center hover:scale-105 transition-transform duration-200" data-aos="fade-right">
+        <img src="https://via.placeholder.com/80" alt="4K Upscaler" class="mx-auto mb-4 rounded-full">
+        <h3 class="font-medium text-white text-lg mb-2">4K Upscaler</h3>
+        <p class="text-gray-400 text-sm">Upscale images to simulated 4K resolution.</p>
+      </a>
+
+      <!-- Nano Banana -->
+      <a href="nano-banana.html" target="_blank" aria-label="Open Nano Banana Tool"
+         class="glass min-w-[180px] p-6 rounded-2xl border border-white/15 text-center hover:scale-105 transition-transform duration-200" data-aos="fade-right">
+        <img src="https://via.placeholder.com/80" alt="Nano Banana" class="mx-auto mb-4 rounded-full">
+        <h3 class="font-medium text-white text-lg mb-2">Nano Banana</h3>
+        <p class="text-gray-400 text-sm">AI-powered creative edits.</p>
+      </a>
+
+      <!-- Face Swap -->
+      <a href="face-swap.html" target="_blank" aria-label="Open Face Swap Tool"
+         class="glass min-w-[180px] p-6 rounded-2xl border border-white/15 text-center hover:scale-105 transition-transform duration-200" data-aos="fade-right">
+        <img src="https://via.placeholder.com/80" alt="Face Swap" class="mx-auto mb-4 rounded-full">
+        <h3 class="font-medium text-white text-lg mb-2">Face Swap</h3>
+        <p class="text-gray-400 text-sm">Swap faces in images using AI.</p>
+      </a>
+
+      <!-- Other Tool Example -->
+      <a href="other-tool.html" target="_blank" aria-label="Open Other Tool"
+         class="glass min-w-[180px] p-6 rounded-2xl border border-white/15 text-center hover:scale-105 transition-transform duration-200" data-aos="fade-right">
+        <img src="https://via.placeholder.com/80" alt="Other Tool" class="mx-auto mb-4 rounded-full">
+        <h3 class="font-medium text-white text-lg mb-2">Other Tool</h3>
+        <p class="text-gray-400 text-sm">Description for another tool.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- Tailwind Glass & Scroll-Snap Styling -->
+<style>
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .glass:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  }
+  .tools-scroll {
+    scroll-snap-type: x mandatory;
+  }
+  .tools-scroll > a {
+    scroll-snap-align: start;
+  }
+
+  /* Optional: mobile adjustments */
+  @media (max-width: 640px) {
+    .glass {
+      padding: 1.5rem;
+      min-width: 150px;
+    }
+  }
+</style>         Contact Me
                 </a>
                 <a href="#about"
                    class="px-6 py-3 glass text-white rounded-lg transition-all duration-300">
@@ -123,40 +193,7 @@
     </div>
 </section>
 
-<!-- TOOLS SECTION -->
-<section id="tools" class="py-20">
-    <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center text-white mb-8" data-aos="zoom-in">
-            My <span class="text-primary-500">Tools</span>
-        </h2>
-        <div class="flex gap-6 overflow-x-auto py-4 px-2 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800 tools-scroll">
-            <a href="https://example.com/nano-banana" target="_blank"
-               class="glass min-w-[180px] p-6 rounded-2xl border border-white/15 text-center" data-aos="fade-right">
-                <img src="https://via.placeholder.com/80" alt="Nano Banana" class="mx-auto mb-4 rounded-full">
-                <h3 class="font-medium text-white text-lg mb-2">Nano Banana</h3>
-                <p class="text-gray-400 text-sm">AI-powered creative edits.</p>
-            </a>
-            <a href="https://example.com/face-swap" target="_blank"
-               class="glass min-w-[180px] p-6 rounded-2xl border border-white/15 text-center" data-aos="fade-right">
-                <img src="https://via.placeholder.com/80" alt="Face Swap" class="mx-auto mb-4 rounded-full">
-                <h3 class="font-medium text-white text-lg mb-2">Face Swap</h3>
-                <p class="text-gray-400 text-sm">Swap faces in images using AI.</p>
-            </a>
-            <a href="https://example.com/tool3" target="_blank"
-               class="glass min-w-[180px] p-6 rounded-2xl border border-white/15 text-center" data-aos="fade-right">
-                <img src="https://via.placeholder.com/80" alt="Tool 3" class="mx-auto mb-4 rounded-full">
-                <h3 class="font-medium text-white text-lg mb-2">Tool 3</h3>
-                <p class="text-gray-400 text-sm">Description for Tool 3.</p>
-            </a>
-            <a href="https://example.com/tool4" target="_blank"
-               class="glass min-w-[180px] p-6 rounded-2xl border border-white/15 text-center" data-aos="fade-right">
-                <img src="https://via.placeholder.com/80" alt="Tool 4" class="mx-auto mb-4 rounded-full">
-                <h3 class="font-medium text-white text-lg mb-2">Tool 4</h3>
-                <p class="text-gray-400 text-sm">Description for Tool 4.</p>
-            </a>
-        </div>
-    </div>
-</section>
+
 
 <!-- ABOUT & SKILLS SECTION -->
 <section id="about" class="py-20">
