@@ -86,15 +86,6 @@ tailwind.config = {
     transition: transform 0.3s ease;
 }
 
-/* Carousel arrows */
-#tools-prev, #tools-next {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 1.5rem;
-}
-
 /* Responsive adjustments */
 @media (max-width: 640px) {
     .glass { padding: 1.25rem; min-width: 140px; }
@@ -142,65 +133,50 @@ tailwind.config = {
     </div>
 </section>
 
-<!-- TOOLS SECTION WITH CAROUSEL -->
+<!-- TOOLS SECTION -->
 <section id="tools" class="py-16 md:py-20 relative">
   <div class="container mx-auto px-6">
     <h2 class="text-3xl font-bold text-center text-white mb-8" data-aos="zoom-in">
       My <span class="text-purple-500">Tools</span>
     </h2>
 
-    <!-- Carousel Wrapper -->
-    <div class="relative">
-      <!-- Left Arrow -->
-      <button id="tools-prev" aria-label="Scroll Left" 
-        class="absolute left-0 top-1/2 transform -translate-y-1/2 z-20 p-3 bg-black/50 text-white rounded-full hover:bg-black/70 transition">
-        &#10094;
-      </button>
+    <!-- Tools Scroll Container -->
+    <div class="tools-scroll scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800 flex gap-6 overflow-x-auto scroll-smooth px-4">
+      <!-- 4K Upscaler -->
+      <a href="rimini.html" target="_blank" aria-label="Open 4K Upscaler Tool"
+         class="glass min-w-[180px] p-6 rounded-2xl border border-white/15 text-center relative overflow-hidden group" data-aos="fade-right">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-secondary-500/20 opacity-0 group-hover:opacity-50 transition-opacity rounded-2xl"></div>
+        <img src="https://img.icons8.com/color/96/upscaler.png" alt="4K Upscaler" class="mx-auto mb-4 rounded-full">
+        <h3 class="font-medium text-white text-lg mb-2">4K Upscaler</h3>
+        <p class="text-gray-400 text-sm">Upscale images to simulated 4K resolution.</p>
+      </a>
 
-      <!-- Right Arrow -->
-      <button id="tools-next" aria-label="Scroll Right" 
-        class="absolute right-0 top-1/2 transform -translate-y-1/2 z-20 p-3 bg-black/50 text-white rounded-full hover:bg-black/70 transition">
-        &#10095;
-      </button>
+      <!-- Nano Banana -->
+      <a href="nano-banana.html" target="_blank" aria-label="Open Nano Banana Tool"
+         class="glass min-w-[180px] p-6 rounded-2xl border border-white/15 text-center relative overflow-hidden group" data-aos="fade-right">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-secondary-500/20 opacity-0 group-hover:opacity-50 transition-opacity rounded-2xl"></div>
+        <img src="https://img.icons8.com/color/96/banana.png" alt="Nano Banana" class="mx-auto mb-4 rounded-full">
+        <h3 class="font-medium text-white text-lg mb-2">Nano Banana</h3>
+        <p class="text-gray-400 text-sm">AI-powered creative edits.</p>
+      </a>
 
-      <!-- Tools Scroll Container -->
-      <div class="tools-scroll scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800 flex gap-6 overflow-x-auto scroll-smooth px-4">
-        <!-- 4K Upscaler -->
-        <a href="rimini.html" target="_blank" aria-label="Open 4K Upscaler Tool"
-           class="glass min-w-[180px] p-6 rounded-2xl border border-white/15 text-center relative overflow-hidden group" data-aos="fade-right">
-          <div class="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-secondary-500/20 opacity-0 group-hover:opacity-50 transition-opacity rounded-2xl"></div>
-          <img src="https://img.icons8.com/color/96/upscaler.png" alt="4K Upscaler" class="mx-auto mb-4 rounded-full">
-          <h3 class="font-medium text-white text-lg mb-2">4K Upscaler</h3>
-          <p class="text-gray-400 text-sm">Upscale images to simulated 4K resolution.</p>
-        </a>
+      <!-- Face Swap -->
+      <a href="face-swap.html" target="_blank" aria-label="Open Face Swap Tool"
+         class="glass min-w-[180px] p-6 rounded-2xl border border-white/15 text-center relative overflow-hidden group" data-aos="fade-right">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-secondary-500/20 opacity-0 group-hover:opacity-50 transition-opacity rounded-2xl"></div>
+        <img src="https://img.icons8.com/color/96/face-id.png" alt="Face Swap" class="mx-auto mb-4 rounded-full">
+        <h3 class="font-medium text-white text-lg mb-2">Face Swap</h3>
+        <p class="text-gray-400 text-sm">Swap faces in images using AI.</p>
+      </a>
 
-        <!-- Nano Banana -->
-        <a href="nano-banana.html" target="_blank" aria-label="Open Nano Banana Tool"
-           class="glass min-w-[180px] p-6 rounded-2xl border border-white/15 text-center relative overflow-hidden group" data-aos="fade-right">
-          <div class="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-secondary-500/20 opacity-0 group-hover:opacity-50 transition-opacity rounded-2xl"></div>
-          <img src="https://img.icons8.com/color/96/banana.png" alt="Nano Banana" class="mx-auto mb-4 rounded-full">
-          <h3 class="font-medium text-white text-lg mb-2">Nano Banana</h3>
-          <p class="text-gray-400 text-sm">AI-powered creative edits.</p>
-        </a>
-
-        <!-- Face Swap -->
-        <a href="face-swap.html" target="_blank" aria-label="Open Face Swap Tool"
-           class="glass min-w-[180px] p-6 rounded-2xl border border-white/15 text-center relative overflow-hidden group" data-aos="fade-right">
-          <div class="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-secondary-500/20 opacity-0 group-hover:opacity-50 transition-opacity rounded-2xl"></div>
-          <img src="https://img.icons8.com/color/96/face-id.png" alt="Face Swap" class="mx-auto mb-4 rounded-full">
-          <h3 class="font-medium text-white text-lg mb-2">Face Swap</h3>
-          <p class="text-gray-400 text-sm">Swap faces in images using AI.</p>
-        </a>
-
-        <!-- Other Tool -->
-        <a href="other-tool.html" target="_blank" aria-label="Open Other Tool"
-           class="glass min-w-[180px] p-6 rounded-2xl border border-white/15 text-center relative overflow-hidden group" data-aos="fade-right">
-          <div class="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-secondary-500/20 opacity-0 group-hover:opacity-50 transition-opacity rounded-2xl"></div>
-          <img src="https://img.icons8.com/color/96/toolbox.png" alt="Other Tool" class="mx-auto mb-4 rounded-full">
-          <h3 class="font-medium text-white text-lg mb-2">Other Tool</h3>
-          <p class="text-gray-400 text-sm">Description for another tool.</p>
-        </a>
-      </div>
+      <!-- Other Tool -->
+      <a href="other-tool.html" target="_blank" aria-label="Open Other Tool"
+         class="glass min-w-[180px] p-6 rounded-2xl border border-white/15 text-center relative overflow-hidden group" data-aos="fade-right">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-secondary-500/20 opacity-0 group-hover:opacity-50 transition-opacity rounded-2xl"></div>
+        <img src="https://img.icons8.com/color/96/toolbox.png" alt="Other Tool" class="mx-auto mb-4 rounded-full">
+        <h3 class="font-medium text-white text-lg mb-2">Other Tool</h3>
+        <p class="text-gray-400 text-sm">Description for another tool.</p>
+      </a>
     </div>
   </div>
 </section>
@@ -353,8 +329,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
     customElements.define('custom-footer', CustomFooter);
-
-    // Tools Carousel Buttons
-    const scrollContainer = document.querySelector('.tools-scroll');
-    const prevBtn = document.getElementById('tools-prev');
-    const nextBtn = document.getElementById('tools-next
+});
+</script>
+</body>
+</html>
